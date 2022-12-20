@@ -1,0 +1,4 @@
+version=4
+opts="mode=git, pgpmode=none" \
+	 https://github.com/dbuenzli/fpath.git \
+         refs/tags/v([\d.]*)

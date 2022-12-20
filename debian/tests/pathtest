@@ -1,0 +1,23 @@
+#!/bin/sh -e
+
+this=pathtest
+indir=debian/tests
+outdir=${ADT_ARTIFACTS:-/tmp}/${this}
+mkdir -p ${outdir}
+
+cp ${indir}/${this}.ml ${outdir}
+cd ${outdir}
+echo "* Compile to bytecode:"
+ocamlbuild -use-ocamlfind -pkgs fpath ${this}.byte
+echo -n "* Run bytecode ... "
+./${this}.byte
+echo "OK."
+
+if [ -x /usr/bin/ocamlopt ]
+then
+    echo "* Compile to native code:"
+    ocamlbuild -use-ocamlfind -pkgs fpath ${this}.native;
+    echo -n "* Run native code ... "
+    ./${this}.native
+    echo "OK."
+fi

@@ -1,0 +1,3 @@
+@OCamlStdlibDir@/fpath/META
+@OCamlStdlibDir@/fpath/fpath.cma
+OPT: @OCamlStdlibDir@/fpath/fpath.cmxs

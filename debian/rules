@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+
+DESTDIR=$(CURDIR)/debian/tmp
+include /usr/share/ocaml/ocamlvars.mk
+
+%:
+	dh $@ --with ocaml
+
+override_dh_auto_clean:
+	ocaml pkg/pkg.ml clean
+
+override_dh_auto_build:
+	ocaml pkg/pkg.ml build --tests true
+
+override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	ocaml pkg/pkg.ml test
+endif
+
+override_dh_auto_install:
+	opam-installer \
+		--prefix=$(DESTDIR) \
+		--libdir=.$(OCAML_STDLIB_DIR) fpath.install

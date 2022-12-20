@@ -1,0 +1,2 @@
+Tests: pathtest
+Depends: @, ocaml-nox, ocaml-findlib, libfindlib-ocaml, ocamlbuild

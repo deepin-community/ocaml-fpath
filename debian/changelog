@@ -1,0 +1,44 @@
+ocaml-fpath (0.7.3-deepin1) unstable; urgency=medium
+
+  * Rebuild
+
+ -- Deepin Packages Builder <packages@deepin.org>  Fri, 11 Nov 2022 18:01:39 +0800
+
+ocaml-fpath (0.7.3-2) unstable; urgency=medium
+
+  * Add ocaml-findlib to Depends of autopkgtest
+
+ -- Stéphane Glondu <glondu@debian.org>  Sun, 27 Sep 2020 11:01:02 +0200
+
+ocaml-fpath (0.7.3-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- Stéphane Glondu <glondu@debian.org>  Mon, 21 Sep 2020 06:24:25 +0200
+
+ocaml-fpath (0.7.2-3) unstable; urgency=medium
+
+  [ Stéphane Glondu ]
+  * Team upload
+  * Add empty dh_dwz override to fix FTBFS
+  * Bump debhelper compat level to 13
+  * Add Rules-Requires-Root: no
+
+  [ Ralf Treinen ]
+  * debian/control: fix address of our git repository
+
+ -- Stéphane Glondu <glondu@debian.org>  Tue, 28 Jul 2020 08:24:58 +0200
+
+ocaml-fpath (0.7.2-2) unstable; urgency=medium
+
+  * debian/copyright: rename license ICS to ISC, as suggested by
+    Thorsten Alteholz
+
+ -- Ralf Treinen <treinen@debian.org>  Sun, 19 Apr 2020 12:17:04 +0200
+
+ocaml-fpath (0.7.2-1) unstable; urgency=medium
+
+  * Initial packaging (closes: #951359)
+
+ -- Ralf Treinen <treinen@debian.org>  Sat, 18 Apr 2020 17:38:39 +0200
